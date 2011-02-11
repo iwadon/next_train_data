@@ -48,7 +48,7 @@ attrs.each do |k, v|
   output_file.puts("#{k}:#{v}")
 end
 days = {"平日" => "[MON][TUE][WED][THU][FRI]", "土曜" => "[SAT]", "日曜・休日" => "[SUN]"}
-m = Regexp.new("[#{marks.keys.join('').sub(/無印/, '\ ')}]?\\d\\d")
+m = Regexp.new("[#{marks.keys.join('').sub(/無印/, '\ ')}]?\\d\\d", nil, 'u')
 times.each do |times2|
   output_file.puts(days[times2.shift[1]])
   times2.each do |k, v|
