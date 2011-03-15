@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 require 'open-uri'
 require 'optparse'
+require 'rubygems'
 require 'nokogiri'
 
 def usage
