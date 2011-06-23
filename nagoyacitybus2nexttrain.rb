@@ -29,7 +29,7 @@ output_file = if output_filename
               end
 doc = Nokogiri(open(ARGV[0]))
 title = doc.xpath(".//table[3]/tr/td/b").text
-marks = {"無印" => "a", "〇" => "b", '△' => 'c'}
+marks = {"無印" => "a", "〇" => "b", '△' => 'c', '×' => 'd'}
 attrs = doc.xpath(".//table[3]/tr/td").text.scan(/^(\S+)・・・([^\n]+)$/).map do |a, b|
   [marks[a] || a, b]
 end
